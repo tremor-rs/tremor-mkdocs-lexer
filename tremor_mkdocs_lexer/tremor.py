@@ -27,11 +27,11 @@ class TremorLexer(RegexLexer):
             # comment
             (r'#(.*?)\n', Comment.Single),
             # keywords
-            (r'(let|emit|drop|match|of|case|when|default|end|patch|insert|update|upsert|erase|merge|for)\b', Keyword.Declaration),
+            (r'(let|emit|drop|match|of|case|when|default|end|patch|insert|update|upsert|erase|merge|for|present|absent)\b', Keyword.Declaration),
             (words((
                 'let', 'emit', 'drop', 'match', 'of', 'case', 'when',
                 'default', 'end', 'patch', 'insert', 'update', 'upsert',
-                'erase', 'merge', 'for'), suffix=r'\b'),
+                'erase', 'merge', 'for', 'present', 'absent'), suffix=r'\b'),
              Keyword),
             # constwords
             (r'(true|false|event|null)', Keyword.Constant),
