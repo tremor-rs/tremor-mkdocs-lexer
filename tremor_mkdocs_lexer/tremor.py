@@ -27,9 +27,9 @@ class TremorLexer(RegexLexer):
             # comment
             (r'#(.*?)\n', Comment.Single),
             # keywords
-            (r'(let|emit|drop|match|of|case|when|default|end|patch|insert|update|upsert|erase|merge|for|present|absent)\b', Keyword.Declaration),
+            (r'(const|let|emit|drop|match|of|case|when|default|end|patch|insert|update|upsert|erase|merge|for|present|absent)\b', Keyword.Declaration),
             (words((
-                'let', 'emit', 'drop', 'match', 'of', 'case', 'when',
+                'const', 'let', 'emit', 'drop', 'match', 'of', 'case', 'when',
                 'default', 'end', 'patch', 'insert', 'update', 'upsert',
                 'erase', 'merge', 'for', 'present', 'absent'), suffix=r'\b'),
              Keyword),

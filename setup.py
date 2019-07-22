@@ -9,8 +9,8 @@ tremor=tremor_mkdocs_lexer:TremorLexer
 
 setup(
     name='tremor-mkdocs-lexer',
-    version='0.5',
-    description='Pygments lexer package for tremor-script v0.5.',
+    version='0.5.2',
+    description='Pygments lexer package for tremor-script v0.5.2+',
     author='Darach Ennis',
     author_email='dennis[at]wayfair.com',
     url='https://git.csnzoo.com/tremor/tremor-mkdocs-lexer',
