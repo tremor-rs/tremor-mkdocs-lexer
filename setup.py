@@ -5,15 +5,16 @@ from setuptools import setup, find_packages
 entry_points = '''
 [pygments.lexers]
 tremor=tremor_mkdocs_lexer:TremorLexer
+trickle=tremor_mkdocs_lexer:TrickleLexer
 '''
 
 setup(
     name='tremor-mkdocs-lexer',
     version='0.5.2',
-    description='Pygments lexer package for tremor-script v0.5.2+',
+    description='Pygments lexer package for tremor-script v0.5.2+ and tremor-query v0.6+',
     author='Darach Ennis',
     author_email='dennis[at]wayfair.com',
-    url='https://git.csnzoo.com/tremor/tremor-mkdocs-lexer',
+    url='https://github.com/wayfair-tremor/tremor-mkdocs-lexer',
     packages=find_packages(),
     entry_points=entry_points,
     install_requires=[

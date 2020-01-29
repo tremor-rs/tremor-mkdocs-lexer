@@ -1,2 +1,3 @@
 from .tremor import TremorLexer
-__all__ = [ "TremorLexer" ]
+from .trickle import TrickleLexer
+__all__ = [ "TremorLexer", "TrickleLexer" ]
