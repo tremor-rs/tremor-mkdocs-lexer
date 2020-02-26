@@ -36,7 +36,7 @@ class TrickleLexer(RegexLexer):
                 'window', 'stream', 'tumbling', 'sliding', 'where', 'having', 'set', 'each'), suffix=r'\b'),
              Keyword),
             # constwords
-            (r'(true|false|event|args|null)', Keyword.Constant),
+            (r'(true|false|event|state|args|null)', Keyword.Constant),
             # wordops
             (r'(and|or|not)\b', Keyword.Constant),
             # integer

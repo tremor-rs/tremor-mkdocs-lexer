@@ -34,7 +34,7 @@ class TremorLexer(RegexLexer):
                 'erase', 'merge', 'for', 'present', 'absent'), suffix=r'\b'),
              Keyword),
             # constwords
-            (r'(true|false|event|null)', Keyword.Constant),
+            (r'(true|false|event|state|null)', Keyword.Constant),
             # wordops
             (r'(and|or|not)\b', Keyword.Constant),
             # integer
