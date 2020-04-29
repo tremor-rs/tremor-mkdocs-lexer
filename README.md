@@ -7,7 +7,7 @@ Currently, parses and syntax highlights tremor-script v0.8.
 # Local setup on Mac OS X
 
 ```bash
-$ git clone git@git.github.com:wayfair.com/tremor-mkdocs-lexer
+$ git clone git@github.com:wayfair-tremor/tremor-mkdocs-lexer
 $ python3 ./setup.py install
 ```
 
