@@ -2,12 +2,12 @@
 
 A pygments lexer suitable for usage in mkdocs tremor documentation.
 
-Currently, parses and syntax highlights tremor-script v0.5.
+Currently, parses and syntax highlights tremor-script v0.8.
 
 # Local setup on Mac OS X
 
 ```bash
-$ git clone git@git.csnzoo.com:tremor/tremor-mkdocs-lexer
+$ git clone git@git.github.com:wayfair.com/tremor-mkdocs-lexer
 $ python3 ./setup.py install
 ```
 

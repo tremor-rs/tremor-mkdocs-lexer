@@ -35,7 +35,7 @@ class TremorLexer(RegexLexer):
                 'fn', 'as', 'with', 'mod', 'intrinsic', 'recur'), suffix=r'\b'),
              Keyword),
             # constwords
-            (r'(true|false|event|state|null|args)', Keyword.Constant),
+            (r'(true|false|event|state|null|args|_)', Keyword.Constant),
             # wordops
             (r'(and|or|not)\b', Keyword.Constant),
             # integer

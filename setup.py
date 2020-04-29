@@ -10,8 +10,8 @@ trickle=tremor_mkdocs_lexer:TrickleLexer
 
 setup(
     name='tremor-mkdocs-lexer',
-    version='0.5.2',
-    description='Pygments lexer package for tremor-script v0.5.2+ and tremor-query v0.6+',
+    version='0.8.0',
+    description='Pygments lexer package for tremor-script v0.8+ and tremor-query v0.8+',
     author='Darach Ennis',
     author_email='dennis[at]wayfair.com',
     url='https://github.com/wayfair-tremor/tremor-mkdocs-lexer',
@@ -23,7 +23,7 @@ setup(
     zip_safe=True,
     license='Apache License',
     classifiers=[
-        'Development Status :: 5 - Production/Stable',
+        'Development Status :: 8 - Production/Stable',
         'Environment :: Console',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: Apache License',
