@@ -29,7 +29,7 @@ class TrickleLexer(RegexLexer):
             # keywords
             (r'(use|const|let|emit|drop|match|of|case|when|default|end|patch|insert|update|upsert|erase|merge|for|present|absent|select|create|define|operator|script|from|into|with|group|by|args|window|stream|tumbling|sliding|where|having|set|each|fn|as|with|mod|intrinsic|recur)\b', Keyword.Declaration),
             (words((
-                'use'|'const', 'let', 'emit', 'drop', 'match', 'of', 'case', 'when',
+                'use', 'const', 'let', 'emit', 'drop', 'match', 'of', 'case', 'when',
                 'default', 'end', 'patch', 'insert', 'update', 'upsert',
                 'erase', 'merge', 'for', 'present', 'absent', 'select', 'create',
                 'define', 'operator', 'script', 'from', 'into', 'with', 'group', 'by',
