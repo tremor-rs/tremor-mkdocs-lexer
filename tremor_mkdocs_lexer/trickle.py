@@ -6,18 +6,19 @@ import re
 
 __all__ = ['TrickleLexer']
 
+
 class TrickleLexer(RegexLexer):
     """RE based tremor-query lexer."""
 
     name = 'Tremor-Query Markup'
-    filenames = [ '*.trickle' ]
-    aliases = [ 'trickle' ]
+    filenames = ['*.trickle']
+    aliases = ['trickle']
     mimetypes = ['text/x-trickle-src']
 
     flags = re.MULTILINE | re.UNICODE
 
     tokens = {
-      'root': [
+        'root': [
             # Shebang
             (r'#![^[\r\n].*$', Comment.Preproc),
             # newline
@@ -64,12 +65,17 @@ class TrickleLexer(RegexLexer):
             #(r'[+-/*%!=~=:]', Operator),
             # identifier is anything else
             (r'[^\W\d]\w*', Name.Other),
-      ],
-      'string': [
+            (r'\{', Name.Other, 'root'),
+            (r'\}', Name.Other, '#pop'),
+
+        ],
+        'string': [
             (r'"', String, '#pop'),
-            (r"""\\['"\\nrt]|\\x[0-7][0-9a-fA-F]|\\0"""
+            (r'#{', Name.Other, 'root'),
+            (r"""\\['"\\nrt#]|\\x[0-7][0-9a-fA-F]|\\0"""
              r"""|\\u\{[0-9a-fA-F]{1,6}\}""", String.Escape),
-            (r'[^\\"]+', String),
+            (r'[^\\"#]+|#[^{]', String),
             (r'\\', String),
-      ]
+
+        ]
     }
