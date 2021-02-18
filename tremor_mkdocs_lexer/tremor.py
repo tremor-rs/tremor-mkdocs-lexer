@@ -6,18 +6,19 @@ import re
 
 __all__ = ['TremorLexer']
 
+
 class TremorLexer(RegexLexer):
     """RE based tremor-script lexer."""
 
     name = 'Tremor-Script Markup'
-    filenames = [ '*.tremor' ]
-    aliases = [ 'tremor' ]
+    filenames = ['*.tremor']
+    aliases = ['tremor']
     mimetypes = ['text/x-tremor-src']
 
     flags = re.MULTILINE | re.UNICODE
 
     tokens = {
-      'root': [
+        'root': [
             # Shebang
             (r'#![^[\r\n].*$', Comment.Preproc),
             # newline
@@ -62,12 +63,15 @@ class TremorLexer(RegexLexer):
             #(r'[+-/*%!=~=:]', Operator),
             # identifier is anything else
             (r'[^\W\d]\w*', Name.Other),
-      ],
-      'string': [
+            (r'\{', Name.Other, 'root'),
+            (r'\}', Name.Other, '#pop'),
+        ],
+        'string': [
             (r'"', String, '#pop'),
-            (r"""\\['"\\nrt]|\\x[0-7][0-9a-fA-F]|\\0"""
+            (r'#{', Name.Other, 'root'),
+            (r"""\\['"\\nrt#]|\\x[0-7][0-9a-fA-F]|\\0"""
              r"""|\\u\{[0-9a-fA-F]{1,6}\}""", String.Escape),
-            (r'[^\\"]+', String),
+            (r'[^\\"#]+|#[^{]', String),
             (r'\\', String),
-      ]
+        ]
     }
