@@ -14,7 +14,7 @@ setup(
     description='Pygments lexer package for tremor-script v0.8+ and tremor-query v0.8+',
     author='Darach Ennis',
     author_email='dennis[at]wayfair.com',
-    url='https://github.com/wayfair-tremor/tremor-mkdocs-lexer',
+    url='https://github.com/tremor-rs/tremor-mkdocs-lexer',
     packages=find_packages(),
     entry_points=entry_points,
     install_requires=[
