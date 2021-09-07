@@ -11,7 +11,7 @@ $ git clone git@github.com:tremor-rs/tremor-mkdocs-lexer
 $ python3 ./setup.py install
 ```
 
-# Local console based teesting
+# Local console based testing
 
 ```bash
 $ pygmentize -l tremor /path/to/file.tremor
