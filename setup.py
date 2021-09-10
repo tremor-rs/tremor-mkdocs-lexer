@@ -6,12 +6,13 @@ entry_points = '''
 [pygments.lexers]
 tremor=tremor_mkdocs_lexer:TremorLexer
 trickle=tremor_mkdocs_lexer:TrickleLexer
+troy=tremor_mkdocs_lexer:TroyLexer
 '''
 
 setup(
     name='tremor-mkdocs-lexer',
-    version='0.8.0',
-    description='Pygments lexer package for tremor-script v0.8+ and tremor-query v0.8+',
+    version='0.12.0',
+    description='Pygments lexer package for tremor-script v0.12+ and tremor-query v0.12+',
     author='Darach Ennis',
     author_email='dennis[at]wayfair.com',
     url='https://github.com/tremor-rs/tremor-mkdocs-lexer',
